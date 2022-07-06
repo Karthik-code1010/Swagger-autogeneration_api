@@ -1,0 +1,33 @@
+  
+    /*  #swagger.tags = ['Book']
+      #swagger.description = 'Book api generation' 
+      #swagger.responses[404]
+      #swagger.summary = "Add a new books"
+  */
+  
+  
+  /*  #swagger.parameters['obj'] = {
+                in: 'body',
+                description: 'book information.',
+                required: true, 
+                type: 'string',
+            }
+        */
+
+
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Origin, Cache-Control')
+  res.header('Access-Control-Allow-Methods', 'GET')
+
+
+  app.use((req, res, next) => {
+  res.append('Access-Control-Allow-Origin', ['*']);
+  res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.append('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
+
+
+ res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Origin, Cache-Control')
+  res.header('Access-Control-Allow-Methods', 'GET')
